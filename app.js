@@ -26,8 +26,9 @@ saveUninitialized:false
 
 app.use(passport.initialize());
 app.use(passport.session());
+// mongodb://localhost:27017/solnstechDB
 
-mongoose.connect("mongodb://localhost:27017/solnstechDB", {useNewUrlParser : true});
+mongoose.connect("mongodb+srv://hrmsuser:Solns@2022@clustersolnstech.1bikubl.mongodb.net/solnstechDB?retryWrites=true&w=majority", {useNewUrlParser : true});
 const userSchema = {
     email: String,
     password : String
